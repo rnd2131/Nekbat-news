@@ -84,7 +84,7 @@
 		.vertical-middle { vertical-align: middle; }
 		.vertical-bottom { vertical-align: bottom; }
 
-		.padding { padding: 20px; }
+		.padding { padding: 16px; }
 			.padding-top { padding-top: 16px; }
 			.padding-left { padding-left: 16px; }
 			.padding-right { padding-right: 16px; }
@@ -102,7 +102,7 @@
 			.border-right { border-right: 4px solid #444; }
 			.border-bottom { border-bottom: 4px solid #444; }
 
-		.border-radius { border-radius: 20px; }
+		.border-radius { border-radius: 16px; }
 			.border-top-left-radius { border-top-left-radius: 16px; }
 			.border-top-right-radius { border-top-right-radius: 16px; }
 			.border-bottom-left-radius { border-bottom-left-radius: 16px; }
@@ -110,7 +110,7 @@
 
 		@media (max-height: 400px), (max-width: 400px) {
 
-			.padding { padding: 20px; }
+			.padding { padding: 8px; }
 				.padding-top { padding-top: 8px; }
 				.padding-left { padding-left: 8px; }
 				.padding-right { padding-right: 8px; }
@@ -122,7 +122,7 @@
 				.margin-right { margin-right: 8px; }
 				.margin-bottom { margin-bottom: 8px; }
 				
-			.border-radius { border-radius: 20px; }
+			.border-radius { border-radius: 8px; }
 				.border-top-left-radius { border-top-left-radius: 8px; }
 				.border-top-right-radius { border-top-right-radius: 8px; }
 				.border-bottom-left-radius { border-bottom-left-radius: 8px; }
@@ -400,6 +400,9 @@
 								</div>
 							</div>
 						</div>
+						<div class="table-cell width-zero vertical-top">
+							
+						</div>
 					</div>
 				</div>
 			</div>
@@ -430,7 +433,6 @@
 							<button class="padding border border-radius" onclick="iframe_submit(query.value)">
 								GO
 							</button>
-							<h1 style="position: absolute; left: 0%; font-size: medium;">free net by Radman</h1>
 						</div>
 					</div>
 				</div>
@@ -444,6 +446,32 @@
 					<div class="table width-full height-full">
 						<div class="table-row">
 							<div class="table-cell horizontal-center vertical-middle">
+								<div class="auto padding width-full height-full">
+									Search Engine
+									<br>
+									<br>
+									<button class="padding margin-bottom margin-right border border-radius" onclick="new_iframe('https://duckduckgo.com')">
+										<img src="data:image/png;base64,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" alt="DuckDuckGo">
+										<br>
+										DuckDuckGo
+									</button>
+									<button class="padding margin-bottom margin-right border border-radius" onclick="new_iframe('https://google.com')">
+										<img src="data:image/png;base64,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" alt="Google">
+										<br>
+										Google
+									</button>
+									<button class="padding margin-bottom margin-right border border-radius" onclick="new_iframe('https://bing.com')">
+										<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABTVBMVEVHcEwIqNICsNIearcLmcoKq98Nl9USjMgYeMAJoNoXe8IccLoJodoCr9oLlc8LltIWfsMSiswCqdUCtOgBtegHpt4EruQIpMgCoc4EscoIls8IotwSicwZeL8DsOUgZLIDrtggZrQZd78ZeMACrc0RjsYgZbMCt8sCoM4Im9QTfsADqdwImtQVgsYMmtYDos4bdL0Kn9oIpd0Nl9QQj88DseUPktECpM0CtOcDoM4Crs0SissBuOoDsuYbdL0Bus0farIAxMwBv8wBtc0ea7gBw8wDl84Flc4Els4WprYbcbsWfsQHpt4eabYiYbAkXK4MmtYRjc4adb4gZbMNltQPktEZecACqc0GquEcbbkVgcYCrs0ThckSicsIo9wLntkBtc0Co80Er+QDsuYAvM0DnM4UhMgYesEBt+kKoNodbrMXgbgLnNgAKCJHcEya7nE1AAAAb3RSTlMALRy3CwPRBRISuNAXIg240NC+zUzQzVj1/VK0tzx7sIPM6oTG5NKtmWMgRDtx70io9Oykj431b9WyqMnm8rDc+uzs7mPc3PX6/////////////////////////////////////////////////wDDLYr7AAABc0lEQVQ4y5XTx3aCQBSAYVQUYoFYYu8ttvTeezmiKIq9RQVb8v7rzNUViJzk284PM5zLYNjfOIIW1XXKPrM79CrBln08vjszqwTOEWLTbg52miCoEhSAT7856AMfsTEwDIBaUAa0SsADmsDTXkopIA01QOtzH5+0F1d4g5UDfiLzLoruq4O1rUhrD/gJLCWKw6E7pV0LugAFWfdw2Gg0bLLZkdttYCQwyobWO53ONS4LGIAC7GK5/uVxyYI6gEAbR8vIruSgpKkCIMAs4fiLIAgPWmmQB7rVU7gr4RGeNdKgBVYB/ppkF54naRApgmUQuG8V2dL3m3SLZBWgwByLVvLFamkhPSQVYUEI995MmHq+VWUfpZ+pPywB08k5121PK61iNSSbWJphS+yUL/Ncb8KgPXQZ2TDMzkJ5Xuj/8DUU1KMxcm3g2dvZuNkf8DWuyxgDipfvctQszMs1LrFHKv92lrDz+GjfcKpRuV+anMaM/dcvyAxZKrGLBmoAAAAASUVORK5CYII=" alt="Bing">
+										<br>
+										Bing
+									</button>
+									<button class="padding margin-bottom margin-right border border-radius" onclick="new_iframe('https://baidu.com')">
+										<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAgCAMAAAAynjhNAAAApVBMVEVHcEwjGdwiGNwjGdwjGdwiGNwhF9wiGNwjGdwjGdwiGNwjGdwiGNwjGNwiGNwjGdwjGdwjGdwjGdwjGdwjGdwjGdwjGdwjGdwjGdwjGdwjGdwjGdwjGdwjGdwfFdz////T0fg3LuD7+/7i4fu8uvUnHd0wJ9+JhO3c2vorIt49NOBoYedgWebm5PtPR+NYUOT29v7Ny/eyr/NHP+J4curr6vylofEcpGvbAAAAHXRSTlMARs5W1+kDEfEhGKIKPPmDwDK4UF+om5Rpxovgef71nYwAAAHjSURBVCjPbZPZdqswDEVtMJh5ChAgsZnTQEKaJm3//9OuJ25DV/XAEt5I1pEEAMrMAhl7R7g4dsBv0y1CyN5jXpwYmm5uKS4ZJRZkFDHH2G2xz4MJCYGXCSfC29zikLjrd5b/N06lE8C/kxcSH2wFPL062gBHKuUuEDhXpZshe0cQ7JQwW+MUxSoYGvxVs4GelCEvF2qWFfnAhpDnd+VdBbtFaXF8HwMdBQFKTYAk3m8KNW1xzJpjrIpEmY4jS1LyEqBJp+KNLRKEXNGPUJ4ayglYjx1XaDJShiuJLWALwRkG5p6oEPgSDexci45swKmlMFf5/25WJuZThgcytid16sjmGPoqBSJCb81DcRfHroaSdSnM9EAIfe8ahRkH2PHWqRwtOrXt5d6cxpFB9sjsn0XKA3Id+v6rbp7fw5NOb8OFRutQmCJ6Xerz0NTNbene6amp3yifoqzKItNQP9rx0jW3/s7wB8dcHw/OCZ2X7krpdYv5FMUK07l/xZPCuSibbThPPk8ieffZPhuJMy7bZAtBL1/1+eNcN/NQ35elk7iSO8wHxYQtfT+cno8zt08qp8gv5/8FnWZmLaFjy216+VHsTA4rMLSyRIbcZFKufQHeLszz6qjHDsaOX2Ta4RCFQvU/Cz1EJ4IoMisAAAAASUVORK5CYII=" alt="Baidu">
+										<br>
+										Baidu
+									</button>
+									<h1>by Radman</h1>
+								</div>
 							</div>
 						</div>
 					</div>
